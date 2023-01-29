@@ -9,6 +9,7 @@ export class Client {
   }
 
   spawn() {
-    return startBot(this.raw);
+    startBot(this.raw);
+    return options.token;
   }
 }
