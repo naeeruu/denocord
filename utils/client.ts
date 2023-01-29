@@ -32,7 +32,7 @@ export class Client {
 
     for (const [event, data] of Object.entries(events)) {
       data.client = this;
-      this.emit(event, data);
+      this.addEventListener(event, data);
     }
 
     this.raw = raw;
