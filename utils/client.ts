@@ -1,5 +1,4 @@
 import { ActivityTypes, createBot, GatewayIntents, startBot } from "../deps.ts";
-import * as events from "../events/mod.ts";
 
 export interface ActivityOptions {
   name: string;
@@ -28,11 +27,6 @@ export class Client {
     if (options.presence) {
       const { activities, status } = options.presence;
       raw.gateway.manager.createShardOptions = () => ({ activities, status });
-    }
-
-    for (const [event, data] of Object.entries(events)) {
-      data.client = this;
-      this.addEventListener(event, data);
     }
 
     this.raw = raw;
