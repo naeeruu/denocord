@@ -1,2 +1,2 @@
-export { GatewayIntents } from "discordeno/mod.ts";
+export { GatewayIntents } from "./deps.js";
 export * from "./utils/mod.js";
