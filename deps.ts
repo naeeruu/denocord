@@ -1,1 +1,1 @@
-export { ActivityTypes, Bot, createBot, DiscordReady, GatewayIntents, startBot, User } from "https://deno.land/x/discordeno@18.0.1/mod.ts";
+export { ActivityTypes as ActivityType, Bot, createBot, DiscordReady, GatewayIntents, startBot, User } from "https://deno.land/x/discordeno@18.0.1/mod.ts";
