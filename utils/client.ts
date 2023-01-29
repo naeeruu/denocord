@@ -19,10 +19,17 @@ export interface ClientOptions {
 
 export class Client {
   constructor(options: ClientOptions) {
-    this.raw = createBot({
+    const raw = createBot({
       token: options.token, 
       intents: options.intents.reduce((a, b) => a | b)
     });
+
+    if (options.presence) {
+      const { activities, status } = options.presence;
+      raw.gateway.manager.createShardOptions = () => ({ activities, status });
+    }
+
+    this.raw = raw;
   }
 
   spawn() {
