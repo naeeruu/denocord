@@ -1,9 +1,9 @@
-import { ActivityTypes, createBot, GatewayIntents, startBot } from "../deps.ts";
+import { ActivityType, createBot, GatewayIntents, startBot } from "../deps.ts";
 import * as events from "../events/mod.ts";
 
 export interface ActivityOptions {
   name: string;
-  type: ActivityTypes;
+  type: ActivityType;
   url?: string;
 }
 
