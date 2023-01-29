@@ -1,4 +1,4 @@
-import { createBot, startBot } from "discordeno/mod.ts";
+import { createBot, startBot } from "../deps.js";
 
 export class Client {
   constructor(options) {
