@@ -1,5 +1,5 @@
 ## --deno-cord
-a discord module for deno (easy to use [discordeno](https://deno.land/x/discordeno) module)
+a discord module for deno (this module just makes it easier to use the discordeno module)
 
 - How to use this module?
 import the module using this raw link repository
