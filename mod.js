@@ -1,2 +1,2 @@
-export { GatewayIntents } from "./deps.js";
-export * from "./utils/mod.js";
+export { GatewayIntents } from "./deps.ts";
+export * from "./utils/mod.ts";
