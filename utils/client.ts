@@ -35,4 +35,9 @@ export class Client {
   spawn() {
     return startBot(this.raw);
   }
+
+  destroy() {
+    stopBot(this.raw);
+    return this;
+  }
 }
