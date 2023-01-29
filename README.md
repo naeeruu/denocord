@@ -4,7 +4,7 @@ a discord module for deno (easy to use [discordeno](https://deno.land/x/discorde
 - How to use this module?
 import the module using this raw link repository
 ```js
-import * as denocord from "https://raw.githubusercontent.com/naeeruu/denocord/main/mod.js";
+import * as denocord from "https://raw.githubusercontent.com/naeeruu/denocord/main/mod.ts";
 ```
 
 #### --maintainer
