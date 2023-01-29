@@ -26,7 +26,7 @@ export class Client {
 
     if (options.presence) {
       const { activities, status } = options.presence;
-      raw.gateway.manager.createShardOptions = () => ({ activities, status });
+      raw.gateway.manager.createShardOptions.makePresence = () => ({ activities, status });
     }
 
     this.raw = raw;
