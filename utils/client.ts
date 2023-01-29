@@ -1,8 +1,20 @@
-import { createBot, GatewayIntents, startBot } from "../deps.ts";
+import { ActivityTypes, createBot, GatewayIntents, startBot } from "../deps.ts";
+
+export interface ClientActivity {
+  name: string;
+  type: ActivityTypes;
+  url?: string;
+}
+
+export interface ClientPresence {
+  activities?: ClientActivity[];
+  status?: string;
+};
 
 export interface ClientOptions {
   token: string;
   intents: GatewayIntents[];
+  presence?: ClientPresence;
 }
 
 export class Client {
