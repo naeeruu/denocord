@@ -1,5 +1,5 @@
 import { ActivityType, createBot, GatewayIntents, startBot } from "../deps.ts";
-import { ClientOptions, PresenceOptions } from "../types/Presence.ts";
+import { ClientOptions, PresenceOptions } from "../types/mod.ts";
 
 export class Client {
   constructor(options: ClientOptions) {
