@@ -1,4 +1,4 @@
-import { ActivityType, createBot, GatewayIntents, startBot } from "../deps.ts";
+import { createBot, startBot } from "../deps.ts";
 import { ClientOptions, PresenceOptions } from "../types/mod.ts";
 
 export class Client {
