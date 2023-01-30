@@ -5,13 +5,13 @@ import * as events from "../events/mod.ts";
 export class Client extends EventEmitter {
   constructor(options: ClientOptions) {
     super();
+    this.available;
     this.intents = options.intents;
     this.presence = options.presence;
-    this.readyTimestamp = null;
   }
 
   isReady(): boolean {
-    return (typeof new Date(this.readyTimestamp) === "date");
+    return this.available;
   }
 
   login(token: string): void {
