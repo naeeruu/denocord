@@ -7,6 +7,11 @@ export class Client extends EventEmitter {
     super();
     this.intents = options.intents;
     this.presence = options.presence;
+    this.readyTimestamp = null;
+  }
+
+  isReady(): boolean {
+    return (typeof new Date(this.readyTimestamp) === "date");
   }
 
   login(token: string): void {
@@ -22,6 +27,7 @@ export class Client extends EventEmitter {
     }
 
     startBot(this.raw);
+    this.readyTimestamp = Date.now();
   }
 
   destroy(): Client {
