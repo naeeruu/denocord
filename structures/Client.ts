@@ -1,15 +1,5 @@
-import { ActivityTypes, createBot, GatewayIntents, startBot } from "../deps.ts";
-
-export interface ActivityOptions {
-  name: string;
-  type: ActivityTypes;
-  url?: string;
-}
-
-export interface PresenceOptions {
-  activities?: ActivityOptions[];
-  status?: string;
-};
+import { ActivityType, createBot, GatewayIntents, startBot } from "../deps.ts";
+import { PresenceOptions } from "../types/Presence.ts";
 
 export interface ClientOptions {
   intents: GatewayIntents[];
