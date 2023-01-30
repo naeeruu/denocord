@@ -7,6 +7,7 @@ export class Message {
     this.channelId = message.channel_id;
     this.client = client;
     this.components = message.components;
+    this.content = message.content;
     this.embeds = message.embeds;
     this.guildId = message.guild_id;
     this.id = message.id;
