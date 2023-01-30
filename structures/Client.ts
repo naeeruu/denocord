@@ -1,10 +1,5 @@
 import { ActivityType, createBot, GatewayIntents, startBot } from "../deps.ts";
-import { PresenceOptions } from "../types/Presence.ts";
-
-export interface ClientOptions {
-  intents: GatewayIntents[];
-  presence?: PresenceOptions;
-}
+import { ClientOptions, PresenceOptions } from "../types/Presence.ts";
 
 export class Client {
   constructor(options: ClientOptions) {
