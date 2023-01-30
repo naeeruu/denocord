@@ -20,10 +20,7 @@ export interface ClientOptions {
 export class Client {
   constructor(options: ClientOptions) {
     this.intents = options.intents;
-    if (options.presence) {
-      const { activities, status } = options.presence;
-      raw.gateway.manager.createShardOptions.makePresence = () => ({ activities, status });
-    }
+    this.presence = options.presence;
   }
 
   login(token: string) {
@@ -31,6 +28,8 @@ export class Client {
       token, 
       intents: this.intents.reduce((a, b) => a | b)
     });
+    this.raw.gateway.manager.createShardOptions.makePresence = () => this.presence;
+
     startBot(this.raw);
   }
 
