@@ -15,6 +15,7 @@ export class Client extends EventEmitter {
   }
 
   login(token: string): void {
+    if (this.available) return;
     this.raw = createBot({
       token, 
       intents: this.intents.reduce((a, b) => a | b)
