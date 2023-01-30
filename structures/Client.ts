@@ -1,5 +1,5 @@
 import { createBot, startBot } from "../deps.ts";
-import { ClientOptions, PresenceOptions } from "../types/mod.ts";
+import { ClientOptions } from "../types/Client.ts";
 
 export class Client {
   constructor(options: ClientOptions) {
