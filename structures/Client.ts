@@ -4,6 +4,7 @@ import * as events from "../events/mod.ts";
 
 export class Client extends EventEmitter {
   constructor(options: ClientOptions) {
+    super();
     this.intents = options.intents;
     this.presence = options.presence;
   }
