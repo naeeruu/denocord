@@ -12,7 +12,7 @@ export class Client {
     this.presence = options.presence;
   }
 
-  login(token: string) {
+  login(token: string): void {
     this.raw = createBot({
       token, 
       intents: this.intents.reduce((a, b) => a | b)
@@ -22,7 +22,7 @@ export class Client {
     startBot(this.raw);
   }
 
-  destroy() {
+  destroy(): Client {
     stopBot(this.raw);
     return this;
   }
