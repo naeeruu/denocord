@@ -1,4 +1,4 @@
-import { ActivityTypes, Bot, createBot, GatewayIntents, startBot } from "../deps.ts";
+import { ActivityTypes, createBot, GatewayIntents, startBot } from "../deps.ts";
 
 export interface ActivityOptions {
   name: string;
@@ -19,15 +19,15 @@ export interface ClientOptions {
 
 export class Client {
   constructor(options: ClientOptions) {
-    this.intents: GatewayIntents[] = options.intents;
+    this.intents = options.intents;
     if (options.presence) {
-      const { activities, status }: PresenceOptions = options.presence;
-      raw.gateway.manager.createShardOptions.makePresence: any = () => ({ activities, status });
+      const { activities, status } = options.presence;
+      raw.gateway.manager.createShardOptions.makePresence = () => ({ activities, status });
     }
   }
 
   login(token: string) {
-    this.raw: Bot = createBot({
+    this.raw = createBot({
       token, 
       intents: this.intents.reduce((a, b) => a | b)
     });
