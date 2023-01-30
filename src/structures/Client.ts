@@ -1,6 +1,7 @@
 import { createBot, EventEmitter, startBot } from "../../deps.ts";
 import { ClientOptions } from "../types/Client.ts";
 import * as events from "../events/mod.ts";
+import * as transformers from "../transformers/mod.ts";
 
 /** Represents a client on Discord */
 export class Client extends EventEmitter {
@@ -29,6 +30,10 @@ export class Client extends EventEmitter {
 
     for (const [event, data] of Object.entries(events)) {
       this.raw.events[event] = data;
+    }
+
+    for (const [transformer, func] of Object.entries(transformers)) {
+      this.raw.transformers[transformer] = func;
     }
 
     startBot(this.raw);
