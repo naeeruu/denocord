@@ -1,5 +1,6 @@
 import { createBot, EventEmitter, startBot } from "../deps.ts";
 import { ClientOptions } from "../types/Client.ts";
+import * as events from "../events/mod.ts";
 
 export class Client extends EventEmitter {
   constructor(options: ClientOptions) {
@@ -14,6 +15,10 @@ export class Client extends EventEmitter {
     });
     this.raw.client = this;
     this.raw.gateway.manager.createShardOptions.makePresence = () => this.presence;
+
+    for (const [event, data] of Object.entries(events)) {
+      this.raw.events[event] = data;
+    }
 
     startBot(this.raw);
   }
