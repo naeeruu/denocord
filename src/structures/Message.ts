@@ -11,7 +11,7 @@ export class Message {
     this.embeds = message.embeds;
     this.guildId = message.guild_id;
     this.id = message.id;
-    this.reference = message.reference_message;
+    this.reference = new Message(client, message.reference_message);
     this.tts = message.tts;
   }
 }
