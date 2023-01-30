@@ -12,6 +12,7 @@ export class Client extends EventEmitter {
       token, 
       intents: this.intents.reduce((a, b) => a | b)
     });
+    this.raw.client = this;
     this.raw.gateway.manager.createShardOptions.makePresence = () => this.presence;
 
     startBot(this.raw);
