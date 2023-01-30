@@ -1,4 +1,4 @@
-export { ActivityType, PresenceStatus } from "../deps.ts";
+export { ActivityType, PresenceStatus } from "../../deps.ts";
 
 export interface PresenceActivity {
   /** name of the activity you want to display */
