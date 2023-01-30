@@ -12,7 +12,6 @@ export interface PresenceOptions {
 };
 
 export interface ClientOptions {
-  token: string;
   intents: GatewayIntents[];
   presence?: PresenceOptions;
 }
