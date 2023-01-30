@@ -1,7 +1,7 @@
-import { createBot, startBot } from "../deps.ts";
+import { createBot, EventEmitter, startBot } from "../deps.ts";
 import { ClientOptions } from "../types/Client.ts";
 
-export class Client {
+export class Client extends EventEmitter {
   constructor(options: ClientOptions) {
     this.intents = options.intents;
     this.presence = options.presence;
