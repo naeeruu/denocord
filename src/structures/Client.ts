@@ -2,11 +2,15 @@ import { createBot, EventEmitter, startBot } from "../../deps.ts";
 import { ClientOptions } from "../types/Client.ts";
 import * as events from "../events/mod.ts";
 
+/** Represents a client on Discord */
 export class Client extends EventEmitter {
   constructor(options: ClientOptions) {
     super();
+    /** whether the bot is ready or not */
     this.available = false;
+    /** the set of intents assigned to this client */
     this.intents = options.intents;
+    /** presence to be created when the client is ready */
     this.presence = options.presence;
   }
 
