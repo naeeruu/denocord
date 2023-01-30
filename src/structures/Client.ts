@@ -1,4 +1,4 @@
-import { createBot, EventEmitter, startBot } from "../deps.ts";
+import { createBot, EventEmitter, startBot } from "../../deps.ts";
 import { ClientOptions } from "../types/Client.ts";
 import * as events from "../events/mod.ts";
 
