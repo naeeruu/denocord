@@ -27,6 +27,8 @@ export class User {
     this.publicFlags = user.public_flags;
     /** Whether the user is an Official Discord System user (part of the urgent message system) */
     this.system = user.system;
+    /** Tags of this user */
+    this.tag = `${user.username}#${user.discriminator}`;
     /** account's owner username */
     this.username = user.username;
   }
