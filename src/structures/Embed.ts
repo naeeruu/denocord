@@ -86,4 +86,19 @@ export class EmbedBuilder {
     this.url = url;
     return this;
   }
+
+  /** Load embed data from the raw embed object */
+  static from(raw: DiscordEmbed): EmbedBuilder {
+    this.author = { name: raw.author.name, iconURL: raw.author.icon_url, proxyURL: raw.author.proxy_icon_url, url: raw.author.url };
+    this.color = raw.color;
+    this.description = raw.description;
+    this.fields = raw.fields;
+    this.footer = { text: raw.footer.text, iconURL: raw.footer.icon_url, proxyURL: raw.footer.proxy_icon_url, url: raw.footer.url };
+    this.image = { url: raw.image.url, proxyURL: raw.image.proxy_url, height: raw.image.height, width: raw.image.width };
+    this.thumbnail = { url: raw.thumbnail.url, proxyURL: raw.thumbnail.proxy_url, height: raw.thumbnail.height, width: raw.thumbnail.width };
+    this.title = raw.title;
+    this.timestamp = raw.timestamp;
+    this.url = raw.url;
+    return this;
+  }
 }
