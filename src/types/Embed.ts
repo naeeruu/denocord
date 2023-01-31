@@ -5,7 +5,19 @@ export interface EmbedAuthor {
   /** Url of author icon (only supports http(s) and attachments) */
   iconURL?: string;
   /** A proxied url of author icon */
-  proxyIconURL?: string;
+  proxyURL?: string;
+  /** Url of author */
+  url?: string;
+}
+
+/** https://discord.com/developers/docs/resources/channel#embed-object-embed-footer-structure */
+export interface EmbedFooter {
+  /** Footer text */
+  text: string;
+  /** Url of footer icon (only supports http(s) and attachments) */
+  iconURL?: string;
+  /** A proxied url of footer icon */
+  proxyURL?: string;
   /** Url of author */
   url?: string;
 }
