@@ -68,7 +68,7 @@ export interface EmbedVideo {
   width?: number;
 }
 
-/** 
+/** https://discord.com/developers/docs/resources/channel#embed-object */
 export interface Embed {
   /** Author information */
   author?: EmbedAuthor;
