@@ -92,4 +92,4 @@ export interface Embed {
   type?: EmbedTypes;
   /** Video information */
   video?: EmbedVideo;
-};
+}
