@@ -10,3 +10,4 @@ You may be interested in seeing an [example](https://github.com/naeeruu/tes-modu
 
 #### --maintainer
 - [@naeeruu](https://github.com/naeeruu)
+- [@alya chanzz~](https://github.com/ylaafx)
