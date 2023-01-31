@@ -1,6 +1,6 @@
 import { Client } from "./Client.ts";
 import { DiscordUser } from "../../deps.ts";
-import { ImageOptions } from "../types/ImageOptions.ts";
+import { ImageOptions } from "../types/Image.ts";
 
 export class User {
   constructor(client: Client, user: DiscordUser) {
