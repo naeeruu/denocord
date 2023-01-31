@@ -1,5 +1,6 @@
 import { Client } from "./Client.ts";
 import { DiscordUser } from "../../deps.ts";
+import { ImageOptions } from "../types/ImageOptions.ts";
 
 export class User {
   constructor(client: Client, user: DiscordUser) {
@@ -31,5 +32,15 @@ export class User {
     this.tag = `${user.username}#${user.discriminator}`;
     /** account's owner username */
     this.username = user.username;
+  }
+
+  /** Get this user's avatar URL */
+  avatarURL(options: ImageOptions): string {
+    const size = options.size || 512;
+    let format;
+    if ("forceStatic" in options) {
+      format = "gif";
+    } else format = "webp";
+    return `https://cdn.discordapp.com/avatars/${this.id}/${this.avatar}.${format}?size=${size}`;
   }
 }
