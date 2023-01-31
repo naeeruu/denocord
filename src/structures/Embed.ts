@@ -1,7 +1,7 @@
 import { EmbedData, EmbedAuthor, EmbedField } from "../types/Embed.ts";
 import { DiscordEmbed } from "../../deps.ts";
 
-export class Embed {
+export class EmbedBuilder {
   constructor(data: EmbedData) {
     this.author = data.author;
     this.color = data.color;
@@ -12,47 +12,47 @@ export class Embed {
     this.timestamp = data.timestamp;
   }
 
-  setColor(color: number): Embed {
+  setColor(color: number): EmbedBuilder {
     this.color = color;
     return this;
   }
 
-  setAuthor(author: EmbedAuthor): Embed {
+  setAuthor(author: EmbedAuthor): EmbedBuilder {
     const { name, iconURL, proxyURL, url } = author;
     this.author = { name, iconURL, proxyURL, url };
     return this;
   }
 
-  setDescription(description: string): Embed {
+  setDescription(description: string): EmbedBuilder {
     this.description = description;
   }
 
-  setTitle(title: string): Embed {
+  setTitle(title: string): EmbedBuilder {
     this.title = title;
     return this;
   }
 
-  addField(field: EmbedField): Embed {
+  addField(field: EmbedField): EmbedBuilder {
     this.fields.push(field);
     return this;
   }
 
-  addFields(fields: EmbedField[]): Embed {
+  addFields(fields: EmbedField[]): EmbedBuilder {
     this.fields.concat(fields);
     return this;
   }
 
-  setFields(fields: EmbedField[]): Embed {
+  setFields(fields: EmbedField[]): EmbedBuilder {
     this.fields = fields;
     return this;
   }
 
-  setFooter(footer: EmbedFooter): Embed {
+  setFooter(footer: EmbedFooter): EmbedBuilder {
     this.footer = footer;
     return this;
   }
 
-  setTimestamp(timestamp: number): Embed {
+  setTimestamp(timestamp: number): EmbedBuilder {
     this.timestamp = timestamp;
     return this;
   }
