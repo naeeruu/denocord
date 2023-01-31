@@ -53,3 +53,15 @@ export interface EmbedProvider {
 
 /** https://discord.com/developers/docs/resources/channel#embed-object-embed-thumbnail-structure */
 export interface EmbedThumbnail extends EmbedImage {}
+
+/** https://discord.com/developers/docs/resources/channel#embed-object-embed-video-structure */
+export interface EmbedVideo {
+  /** Height of video */
+  height?: number;
+  /** A proxied url of the video */
+  proxyURL?: string;
+  /** Source url of video */
+  url?: string;
+  /** Width of video */
+  width?: number;
+}
