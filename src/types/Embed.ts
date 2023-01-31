@@ -69,7 +69,7 @@ export interface EmbedVideo {
 }
 
 /** https://discord.com/developers/docs/resources/channel#embed-object */
-export interface Embed {
+export interface EmbedData {
   /** Author information */
   author?: EmbedAuthor;
   /** Color code of the embed */
