@@ -21,3 +21,15 @@ export interface EmbedFooter {
   /** Url of author */
   url?: string;
 }
+
+/** https://discord.com/developers/docs/resources/channel#embed-object-embed-image-structure */
+export interface EmbedImage {
+  /** Source url of image (only supports http(s) and attachments) */
+  url: string;
+  /** Height of image */
+  height?: number;
+  /** Width of image */
+  width?: number;
+  /** A proxied url of the image */
+  proxyURL?: string;
+}
