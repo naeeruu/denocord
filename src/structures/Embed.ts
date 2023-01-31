@@ -1,4 +1,4 @@
-import { EmbedData, EmbedAuthor, EmbedField } from "../types/Embed.ts";
+import { EmbedData, EmbedAuthor, EmbedField, EmbedImage, EmbedThumbnail } from "../types/Embed.ts";
 import { DiscordEmbed } from "../../deps.ts";
 
 export class EmbedBuilder {
@@ -8,6 +8,8 @@ export class EmbedBuilder {
     this.description = data.description;
     this.fields = data.fields;
     this.footer = data.footer;
+    this.image = data.image;
+    this.thumbnail = data.thumbnail;
     this.title = data.title;
     this.timestamp = data.timestamp;
     this.url = data.url;
@@ -70,6 +72,12 @@ export class EmbedBuilder {
   /** Sets the thumbnail of this embed */
   setThumbnail(url: string): EmbedBuilder {
     this.thumbnail = { url };
+    return this;
+  }
+
+  /** Sets the image of this embed */
+  setImage(url: string): EmbedBuilder {
+    this.image = { url };
     return this;
   }
 
