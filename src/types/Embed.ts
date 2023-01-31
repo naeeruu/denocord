@@ -43,3 +43,10 @@ export interface EmbedImage {
   /** A proxied url of the image */
   proxyURL?: string;
 }
+
+export interface EmbedProvider {
+  /** Name of provider */
+  name?: string;
+  /** Url of provider */
+  url?: string;
+}
