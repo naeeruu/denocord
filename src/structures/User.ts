@@ -36,8 +36,6 @@ export class User {
 
   /** Get this user's avatar URL */
   avatarURL(options: ImageOptions): string {
-    const size = options.size || 512;
-    const format = options.forceStatic ? "webp" : "gif";
-    return `https://cdn.discordapp.com/avatars/${this.id}/${this.avatar}.${format}?size=${size}`;
+    return this.client.helpers.getAvatarUrl(this.id, this.discriminator, { avatar: this.avatar, size: options.size, format: options.format });
   }
 }
