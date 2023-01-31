@@ -50,3 +50,6 @@ export interface EmbedProvider {
   /** Url of provider */
   url?: string;
 }
+
+/** https://discord.com/developers/docs/resources/channel#embed-object-embed-thumbnail-structure */
+export interface EmbedThumbnail extends EmbedImage {}
