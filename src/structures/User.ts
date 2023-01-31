@@ -36,6 +36,6 @@ export class User {
 
   /** Get this user's avatar URL */
   avatarURL(options: ImageOptions): string {
-    return this.client.helpers.getAvatarUrl(this.id, this.discriminator, { avatar: this.avatar, size: options.size, format: options.format });
+    return this.client.helpers.getAvatarURL(this.id, this.discriminator, { avatar: this.avatar, size: options.size, format: options.format });
   }
 }
