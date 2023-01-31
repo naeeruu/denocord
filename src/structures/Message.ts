@@ -1,11 +1,9 @@
-import { Client } from "./Client.ts";
+import { Client, User } from "./mod.ts";
 import { DiscordMessage } from "../../deps.ts";
 
 /** Represents a message on Discord */
 export class Message {
   constructor(client: Client, message: DiscordMessage) {
-    /** user object of this message sender */
-    this.author = message.author;
     /** id of the channel this message was sent */
     this.channelId = message.channel_id;
     /** client handler for this message */
@@ -26,6 +24,12 @@ export class Message {
     this.tts = message.tts;
   }
 
+  /** Get the user object from the message sender */
+  get author(): User {
+    return new User(this.client, message.author);
+  }
+
+  /** Get the message object that this message replied to */
   get reference(): Message {
     if (this.referenceMessage) return new Message(client, this.referenceMessage);
   }
