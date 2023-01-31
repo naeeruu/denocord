@@ -1,3 +1,5 @@
+export { EmbedType } from "../../deps.ts";
+
 /** https://discord.com/developers/docs/resources/channel#embed-object-embed-author-structure */
 export interface EmbedAuthor {
   /** Name of author */
@@ -65,3 +67,29 @@ export interface EmbedVideo {
   /** Width of video */
   width?: number;
 }
+
+/** 
+export interface Embed {
+  /** Author information */
+  author?: EmbedAuthor;
+  /** Color code of the embed */
+  color?: number;
+  /** Description of embed */
+  description?: string;
+  /** Fields information */
+  fields?: EmbedField[];
+  /** Footer information */
+  footer?: EmbedFooter;
+  /** Image information */
+  image?: EmbedImage;
+  /** Provider information */
+  provider?: EmbedProvider;
+  /** Thumbnail information */
+  thumbnail?: EmbedThumbnail;
+  /** Timestamp of embed content */
+  timestamp?: number;
+  /** Type of embed (always "rich" for webhook embeds) */
+  type?: EmbedTypes;
+  /** Video information */
+  video?: EmbedVideo;
+};
